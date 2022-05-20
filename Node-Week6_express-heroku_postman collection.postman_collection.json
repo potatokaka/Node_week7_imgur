@@ -1,0 +1,255 @@
+{
+	"info": {
+		"_postman_id": "e92a0c79-487e-4099-b1cb-4d97458eb35f",
+		"name": "Node-Week6_express-heroku_postman collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "users 註冊",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"aabbcc111@gmail.com\",\n    \"name\": \"測試姓名\",\n    \"password\": \"1q2w3e4r\",\n    \"confirmPassword\": \"1q2w3e4r\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hexwall-week6.herokuapp.com/users/sign_up",
+					"protocol": "https",
+					"host": [
+						"hexwall-week6",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"sign_up"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users 登入",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \n    \"email\": \"aabbcc111@gmail.com\",\n    \"password\": \"1q2w3e4r\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hexwall-week6.herokuapp.com/users/sign_in",
+					"protocol": "https",
+					"host": [
+						"hexwall-week6",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"sign_in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users 更改密碼",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODc0MTViY2MxMDg1NzIzNDhlNTkzYiIsImlhdCI6MTY1MzAzMTI2OCwiZXhwIjoxNjUzNjM2MDY4fQ.uM1V_yoOk7PHckg0hTy_PzP7zsnubPgwmhIcFTnnhCw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \n    \"password\": \"1q2w3e4r\",\n    \"confirmPassword\": \"1q2w3e4r\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hexwall-week6.herokuapp.com/users/updatePassword",
+					"protocol": "https",
+					"host": [
+						"hexwall-week6",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"updatePassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users 取得個人資料",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODA4Y2YyMmVkZGNlYzJhMWUwMGNiZiIsImlhdCI6MTY1MzAyOTc4MywiZXhwIjoxNjUzNjM0NTgzfQ.LeHEgvUKTHZew8zpLiKQE-e3p06tywsAihQkPbuZDB0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \n    \"email\": \"abcbbb2@gmail.com\",\n    \"password\": \"1q2w3e4r\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hexwall-week6.herokuapp.com/users/profile",
+					"protocol": "https",
+					"host": [
+						"hexwall-week6",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "users 更新個人資料",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODA4Y2YyMmVkZGNlYzJhMWUwMGNiZiIsImlhdCI6MTY1MzAyOTc4MywiZXhwIjoxNjUzNjM0NTgzfQ.LeHEgvUKTHZew8zpLiKQE-e3p06tywsAihQkPbuZDB0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \n    \"name\": \"測試姓名\",\n    \"gender\": \"male\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hexwall-week6.herokuapp.com/users/profile",
+					"protocol": "https",
+					"host": [
+						"hexwall-week6",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"users",
+						"profile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post 張貼個人動態",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODc0MTViY2MxMDg1NzIzNDhlNTkzYiIsImlhdCI6MTY1MzAzMTQ4NiwiZXhwIjoxNjUzNjM2Mjg2fQ.WSROmvJY-yOMfhQmShD8l1dkVCkuRBiTDdoTQHHjVTE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \n    \"content\": \"測試內容222\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hexwall-week6.herokuapp.com/api/posts",
+					"protocol": "https",
+					"host": [
+						"hexwall-week6",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "posts 觀看所有動態",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODc0MTViY2MxMDg1NzIzNDhlNTkzYiIsImlhdCI6MTY1MzAzMTQ4NiwiZXhwIjoxNjUzNjM2Mjg2fQ.WSROmvJY-yOMfhQmShD8l1dkVCkuRBiTDdoTQHHjVTE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \n    \"email\": \"abcbbb2@gmail.com\",\n    \"password\": \"1q2w3e4r\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://hexwall-week6.herokuapp.com/api/posts",
+					"protocol": "https",
+					"host": [
+						"hexwall-week6",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
