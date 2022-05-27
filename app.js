@@ -12,7 +12,7 @@ const swaggerFile = require('./swagger-output.json');
 // Router
 const postsRouter = require('./routes/posts');
 const usersRouter = require('./routes/users');
-
+const uploadRouter = require('./routes/upload');
 
 // Error Message
 const { resErrorProd, resErrorDev } = require('./service/resError')
@@ -37,7 +37,9 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/api/posts', postsRouter);
-app.use('/users', usersRouter);
+app.use('/api/users', usersRouter);
+app.use('/api/uploadImage', uploadRouter);
+
 app.use('/api-doc', swaggerUI.serve, swaggerUI.setup(swaggerFile));
 
 // 404 錯誤
