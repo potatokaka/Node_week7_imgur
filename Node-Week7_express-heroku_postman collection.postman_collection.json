@@ -1,8 +1,9 @@
 {
 	"info": {
-		"_postman_id": "e92a0c79-487e-4099-b1cb-4d97458eb35f",
-		"name": "Node-Week6_express-heroku_postman collection",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"_postman_id": "d2c6d8ed-ce86-4d49-bc58-ff5c7a3b91c8",
+		"name": "Node-Week7_express-heroku_postman collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8560952"
 	},
 	"item": [
 		{
@@ -12,7 +13,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"email\": \"aabbcc111@gmail.com\",\n    \"name\": \"測試姓名\",\n    \"password\": \"1q2w3e4r\",\n    \"confirmPassword\": \"1q2w3e4r\"\n}",
+					"raw": "{\n    \"email\": \"aabbcc111222@gmail.com\",\n    \"name\": \"測試姓名\",\n    \"password\": \"1q2w3e4r\",\n    \"confirmPassword\": \"1q2w3e4r\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -20,14 +21,15 @@
 					}
 				},
 				"url": {
-					"raw": "https://hexwall-week6.herokuapp.com/users/sign_up",
+					"raw": "https://hexwall-week7.herokuapp.com/api/users/sign_up",
 					"protocol": "https",
 					"host": [
-						"hexwall-week6",
+						"hexwall-week7",
 						"herokuapp",
 						"com"
 					],
 					"path": [
+						"api",
 						"users",
 						"sign_up"
 					]
@@ -50,14 +52,15 @@
 					}
 				},
 				"url": {
-					"raw": "https://hexwall-week6.herokuapp.com/users/sign_in",
+					"raw": "https://hexwall-week7.herokuapp.com/api/users/sign_in",
 					"protocol": "https",
 					"host": [
-						"hexwall-week6",
+						"hexwall-week7",
 						"herokuapp",
 						"com"
 					],
 					"path": [
+						"api",
 						"users",
 						"sign_in"
 					]
@@ -86,14 +89,15 @@
 					}
 				},
 				"url": {
-					"raw": "https://hexwall-week6.herokuapp.com/users/updatePassword",
+					"raw": "https://hexwall-week7.herokuapp.com/api/users/updatePassword",
 					"protocol": "https",
 					"host": [
-						"hexwall-week6",
+						"hexwall-week7",
 						"herokuapp",
 						"com"
 					],
 					"path": [
+						"api",
 						"users",
 						"updatePassword"
 					]
@@ -125,14 +129,15 @@
 					}
 				},
 				"url": {
-					"raw": "https://hexwall-week6.herokuapp.com/users/profile",
+					"raw": "https://hexwall-week7.herokuapp.com/api/users/profile",
 					"protocol": "https",
 					"host": [
-						"hexwall-week6",
+						"hexwall-week7",
 						"herokuapp",
 						"com"
 					],
 					"path": [
+						"api",
 						"users",
 						"profile"
 					]
@@ -161,14 +166,15 @@
 					}
 				},
 				"url": {
-					"raw": "https://hexwall-week6.herokuapp.com/users/profile",
+					"raw": "https://hexwall-week7.herokuapp.com/api/users/profile",
 					"protocol": "https",
 					"host": [
-						"hexwall-week6",
+						"hexwall-week7",
 						"herokuapp",
 						"com"
 					],
 					"path": [
+						"api",
 						"users",
 						"profile"
 					]
@@ -197,16 +203,53 @@
 					}
 				},
 				"url": {
-					"raw": "https://hexwall-week6.herokuapp.com/api/posts",
+					"raw": "https://hexwall-week7.herokuapp.com/api/posts",
 					"protocol": "https",
 					"host": [
-						"hexwall-week6",
+						"hexwall-week7",
 						"herokuapp",
 						"com"
 					],
 					"path": [
 						"api",
 						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "post 上傳圖片",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyODc0MTViY2MxMDg1NzIzNDhlNTkzYiIsImlhdCI6MTY1MzAzMTQ4NiwiZXhwIjoxNjUzNjM2Mjg2fQ.WSROmvJY-yOMfhQmShD8l1dkVCkuRBiTDdoTQHHjVTE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "",
+							"type": "file",
+							"src": "/Users/linchiao-jo/Desktop/Rectangle 505.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://hexwall-week7.herokuapp.com/api/uploadImage",
+					"protocol": "https",
+					"host": [
+						"hexwall-week7",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"uploadImage"
 					]
 				}
 			},
@@ -236,10 +279,10 @@
 					}
 				},
 				"url": {
-					"raw": "https://hexwall-week6.herokuapp.com/api/posts",
+					"raw": "https://hexwall-week7.herokuapp.com/api/posts",
 					"protocol": "https",
 					"host": [
-						"hexwall-week6",
+						"hexwall-week7",
 						"herokuapp",
 						"com"
 					],
